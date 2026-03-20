@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Improve Skills - PrepWise</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background:#0d0f14;
+    color:#e8eaf0;
+    min-height:100vh;
+    padding:40px 20px;
+    position:relative;
+  }
+
+  body::before, body::after {
+    content:"";
+    position:absolute;
+    filter:blur(80px);
+    z-index:-1;
+  }
+
+  body::before {
+    width:600px; height:600px;
+    background: radial-gradient(circle, rgba(108,140,255,0.2), transparent 70%);
+    top:-100px; left:-100px;
+  }
+
+  body::after {
+    width:500px; height:500px;
+    background: radial-gradient(circle, rgba(255,107,107,0.15), transparent 70%);
+    bottom:-120px; right:-120px;
+  }
+
+  .home-icon {
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:36px; height:36px;
+    background:#12141d;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    text-decoration:none;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    transition:0.3s;
+  }
+
+  .home-icon:hover { background:#1a1c28; }
+  .home-icon svg { width:20px; height:20px; fill:#6c8cff; }
+
+  h1 { font-size:48px; font-weight:700; background:linear-gradient(90deg,#6c8cff,#ff6b6b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:20px; text-align:center; }
+
+  .subject-card {
+    background:#12141d;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:20px;
+    box-shadow:0 0 50px rgba(0,0,0,0.7);
+    cursor:pointer;
+  }
+
+  .subject-card h3 {
+    font-size:22px;
+    color:#6c8cff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .subject-card h3 span { font-size:18px; }
+
+  .topics {
+    display:none;
+    margin-top:15px;
+    padding-left:15px;
+  }
+
+  .topic {
+    margin-bottom:10px;
+  }
+
+  .topic h4 {
+    font-size:18px;
+    color:#ff6b6b;
+    margin-bottom:5px;
+  }
+
+  .topic ul {
+    list-style:none;
+    padding-left:10px;
+  }
+
+  .topic ul li {
+    margin-bottom:5px;
+  }
+
+  .topic ul li a {
+    text-decoration:none;
+    color:#e8eaf0;
+    transition:0.3s;
+  }
+
+  .topic ul li a:hover { color:#6c8cff; }
+</style>
+</head>
+<body>
+
+<!-- Home icon -->
+<a href="dashboard.html" class="home-icon" title="Back to Dashboard">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M12 3l10 9h-3v9h-6v-6H11v6H5v-9H2z"/>
+</svg>
+</a>
+
+<h1>Improve Skills</h1>
+
+<!-- DSA -->
+<div class="subject-card" onclick="toggleTopics(this)">
+  <h3>DSA <span>▼</span></h3>
+  <div class="topics">
+    <div class="topic">
+      <h4>Arrays</h4>
+      <ul>
+        <li><a href="#">Practice Questions</a></li>
+        <li><a href="#">Study Material PDF</a></li>
+      </ul>
+    </div>
+    <div class="topic">
+      <h4>Trees</h4>
+      <ul>
+        <li><a href="#">Questions</a></li>
+        <li><a href="#">Video Tutorial</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- DBMS -->
+<div class="subject-card" onclick="toggleTopics(this)">
+  <h3>DBMS <span>▼</span></h3>
+  <div class="topics">
+    <div class="topic">
+      <h4>SQL Basics</h4>
+      <ul>
+        <li><a href="#">Practice Questions</a></li>
+        <li><a href="#">Study Material</a></li>
+      </ul>
+    </div>
+    <div class="topic">
+      <h4>Normalization</h4>
+      <ul>
+        <li><a href="#">Exercises</a></li>
+        <li><a href="#">Videos</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- OS -->
+<div class="subject-card" onclick="toggleTopics(this)">
+  <h3>Operating Systems <span>▼</span></h3>
+  <div class="topics">
+    <div class="topic">
+      <h4>Processes</h4>
+      <ul>
+        <li><a href="#">Questions</a></li>
+        <li><a href="#">Study Material</a></li>
+      </ul>
+    </div>
+    <div class="topic">
+      <h4>Memory Management</h4>
+      <ul>
+        <li><a href="#">Exercises</a></li>
+        <li><a href="#">Videos</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CN -->
+<div class="subject-card" onclick="toggleTopics(this)">
+  <h3>Computer Networks <span>▼</span></h3>
+  <div class="topics">
+    <div class="topic">
+      <h4>Basics</h4>
+      <ul>
+        <li><a href="#">Questions</a></li>
+        <li><a href="#">PDF Material</a></li>
+      </ul>
+    </div>
+    <div class="topic">
+      <h4>Protocols</h4>
+      <ul>
+        <li><a href="#">Practice Questions</a></li>
+        <li><a href="#">Video Lectures</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- OOPs -->
+<div class="subject-card" onclick="toggleTopics(this)">
+  <h3>OOPs <span>▼</span></h3>
+  <div class="topics">
+    <div class="topic">
+      <h4>Classes & Objects</h4>
+      <ul>
+        <li><a href="#">Questions</a></li>
+        <li><a href="#">PDF</a></li>
+      </ul>
+    </div>
+    <div class="topic">
+      <h4>Inheritance & Polymorphism</h4>
+      <ul>
+        <li><a href="#">Practice</a></li>
+        <li><a href="#">Video Tutorials</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleTopics(card) {
+  const topicsDiv = card.querySelector('.topics');
+  const arrow = card.querySelector('span');
+  if(topicsDiv.style.display === "block") {
+    topicsDiv.style.display = "none";
+    arrow.textContent = "▼";
+  } else {
+    topicsDiv.style.display = "block";
+    arrow.textContent = "▲";
+  }
+}
+</script>
+
+</body>
+</html>
