@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - PrepWise</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* Use same styles as login page */
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #0d0f14;
+    color: #e8eaf0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  body::before, body::after {
+    content: "";
+    position: absolute;
+    filter: blur(80px);
+  }
+
+  body::before {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(108,140,255,0.2), transparent 70%);
+    top: -100px; left: -100px;
+  }
+
+  body::after {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(255,107,107,0.15), transparent 70%);
+    bottom: -120px; right: -120px;
+  }
+
+  .container {
+    text-align: center;
+    z-index: 2;
+    animation: float 4s ease-in-out infinite;
+    width: 100%;
+    max-width: 400px;
+    background: #12141d;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.7);
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #6c8cff, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: #7a8099;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background: #1a1c28;
+    color: #e8eaf0;
+    font-size: 14px;
+  }
+
+  input::placeholder {
+    color: #7a8099;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: #6c8cff;
+    color: white;
+    width: 100%;
+  }
+
+  .btn-primary:hover {
+    background: #5a76e0;
+  }
+
+  .link {
+    display: block;
+    margin-top: 15px;
+    color: #6c8cff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1 class="title">Register</h1>
+  <p class="subtitle">Create a new account</p>
+
+  <form action="dashboard.html">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <input type="password" placeholder="Confirm Password" required>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+
+  <a href="login.html" class="link">Already have an account? Login</a>
+</div>
+
+</body>
+</html>
